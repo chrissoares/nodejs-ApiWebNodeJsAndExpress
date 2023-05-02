@@ -4,5 +4,25 @@ const port = 3000;
 
 app.get('/', (req, res) => res.send('Hello Chegado!'));
 
+app.get('/products', (req, res) => {
+    const products = [
+        {
+            id: 1,
+            name: "hammer",
+        },
+        {
+            id: 2,
+            name: "screwdriver",
+        },
+        {
+            id: 1,
+            name: "wrench",
+        },
+
+    ];
+
+    res.json(products);
+})
+
 app.listen(port, () => console.log(`Exemple app listening por ${port}!`));
 
